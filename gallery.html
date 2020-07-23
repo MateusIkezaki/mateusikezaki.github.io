@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gallerystyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap" rel="stylesheet">
+    <link rel="icon" href="Icon.png">
+    <title>Home</title>
+</head>
+<body>
+    <div class="blackscreen"></div>
+    <div class="banner"></div>
+
+    <div class="burger" id = "burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+    <div class="head-container">
+        <div class="head">
+            <h1>Gallery</h1>
+        </div>
+    </div>
+    <br>
+    <nav id="header">
+        <ul class="nav-links" >
+            <li><a href="index.html">Home</a></li>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="websites.html">Websites</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+    
+    <div class="display-container">
+        <div class="cross" onclick="HideDisplay()">
+            <img src="xblack.png">
+        </div>
+        <img src="./GalleryImages/Faceless.png" id="displaysource">
+        <div class="displaytext">
+            <a download="derp" id="download">
+                <button>Download</button>
+            </a>
+            <h1 id="title">Kaonashi</h1>
+            
+            <h2 id="sub">Spirited Away</h2>
+            <p id="desc"></p>
+        </div>
+    </div>
+
+    <div class="picture-container">
+        <div class="picture" >
+            <img src="./GalleryImages/Faceless.png" onclick="Display(this.src, 'Kaonashi', 'from Spirited Away', descriptions[0])">
+        </div>
+        <div class="picture">
+            <img src="./GalleryImages/Majoras Mask.png"  onclick="Display(this.src, 'Majora´s Mask', 'from The Legend of Zelda: Majora´s Mask', descriptions[1])"> 
+        </div>
+    </div>
+
+    <br>
+    
+    <div class="picture-container">
+        <div class="picture">
+            <img src="./GalleryImages/Artists.png" onclick="Display(this.src, 'Artists´ Guild', 'My friends in pixels', descriptions[2])">
+        </div>
+        <div class="picture">
+            <img src="./GalleryImages/Self.png" onclick="Display(this.src, 'Self Portrait', 'It´s a me', descriptions[3])">
+        </div>
+    </div>
+
+    <br>
+
+    <div class="picture-container">
+        <div class="picture">
+            <img src="./GalleryImages/Nando.png" onclick="Display(this.src, 'Nando', 'Birthday gift', descriptions[4])">
+        </div>
+        <div class="picture">
+            <img src="./GalleryImages/Game Over.png" onclick="Display(this.src, 'Game Over', 'My take on Afterlife', descriptions[5])">
+        </div>
+    </div>
+
+    <br>
+
+    <div class="picture-container">
+        <div class="picture">
+            <img src="./GalleryImages/Robbie Rotten.png" onclick="Display(this.src, 'Robbie Rotten', 'from Lazy Town', descriptions[6])">
+        </div>
+        <div class="picture">
+            <img src="./GalleryImages/Aquarium.gif" onclick="Display(this.src, 'Aquarium', 'Super Mario Bros. Fan gif', descriptions[7])">
+        </div>
+    </div>
+
+    <br>
+
+    <div class="picture-container">
+        <div class="picture">
+            <img src="./GalleryImages/Subway.png" onclick="Display(this.src, 'Subway', 'Spirited Away recreation', descriptions[8])">
+        </div>
+        <div class="picture">
+            <img src="./GalleryImages/Jotaro Kujo.png" onclick="Display(this.src, 'Jotaro Kujo', 'from Jojo´s Bizarre Adventure', descriptions[9])">
+        </div>
+    </div>
+
+    <br>
+
+    <div class="picture-container">
+        <div class="picture">
+            <img src="./GalleryImages/Scout.png" onclick="Display(this.src, 'Scout', 'from Attack on Titan', descriptions[10])">
+        </div>
+        <div class="picture">
+            <img src="./GalleryImages/skyscrapper.png" onclick="Display(this.src, 'Skyscrapper', 'Personal Project', descriptions[11])">
+        </div>
+    </div>
+
+    <br>
+
+    <div class="picture-container">
+        <div class="picture">
+            <img src="./GalleryImages/Link.png" onclick="Display(this.src, 'Link', 'from The Legend of Zelda', descriptions[12])">
+        </div>
+        <div class="picture">
+            <img src="./GalleryImages/Phantom.gif" onclick="Display(this.src, 'Phantom', 'Your Status Project', descriptions[13])">
+        </div>
+    </div>
+
+    <br>
+
+    <div class="picture-container">
+        <div class="picture">
+            <img src="./GalleryImages/Saitama.png" onclick="Display(this.src, 'Saitama', 'from One Punch Man', descriptions[14])">
+        </div>
+        <div class="picture">
+            <img src="./GalleryImages/Ohaguro - Bettari.png" onclick="Display(this.src, 'Ohaguro Bettari', 'Japanese Folclore', descriptions[15])">
+        </div>
+    </div>
+
+    <br>
+
+    <div class="picture-container">
+        <div class="picture">
+            <img src="./GalleryImages/Chell.png" onclick="Display(this.src, 'Chell', 'from Portal', descriptions[16])">
+        </div>
+        <div class="picture">
+            <img src="./GalleryImages/Samurai.png" onclick="Display(this.src, 'Samurai', 'Character Concept Art', descriptions[17])">
+        </div>
+    </div>
+
+    <br>
+
+    <div class="picture-container">
+        <div class="picture">
+            <img src="./GalleryImages/Gunner.png" onclick="Display(this.src, 'Gunner', 'Character Concept Art', descriptions[18])">
+        </div>
+        <div class="picture">
+            <img src="./GalleryImages/Colossus.png" onclick="Display(this.src, 'Colossus', 'Character Concept Art', descriptions[19])">
+        </div>
+    </div>
+
+    <br>
+    <script src = 'app.js'></script>
+</body>
+</html>

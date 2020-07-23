@@ -1,0 +1,517 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body, html{
+    height: 100%;
+    width: 100%;
+}
+
+:root{
+    --lineoffsetx: -6px;
+    --lineoffsety: -8px; 
+}
+
+.cross{
+    background-color: rgb(26, 26, 26);
+    float: right;
+    width: 11%;
+    cursor: pointer;
+    text-align: center;
+}
+
+.cross img{
+    width: 100%;
+    height: auto;
+    filter: invert(1);
+}
+
+
+.display-container{
+    opacity: 0;
+    background-color: white;
+    top: 10%;
+    margin-left: 10%;
+    overflow: auto;
+    z-index: 9;
+    position: fixed;
+    width: 82%;
+    height: 80%;
+    pointer-events: none;
+    transform: translateY(15%);
+    transition: all 0.3s ease-in;
+}
+
+.display-container img{
+    margin-left: 5%;
+    margin-top: 5%;
+    width: 90%;
+    height: auto;
+}
+
+.displaytext{
+    box-shadow: 0px -7px 15px rgba(0, 0, 0, 0.548); ;
+    width: 100%;
+    margin-top: 5%;
+    background-color: rgb(26, 26, 26);
+    height: 60%;
+    overflow: auto;
+    position: relative;
+}
+
+.displaytext a button{
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: 'Manrope', sans-serif;
+    margin-top: 2%;
+    margin-right: 2%;
+    right: 0%;
+    float: right;
+    width: 27%;
+    height: 12%;
+    border: 2px solid white;
+    font-weight: bold;
+    
+}
+
+.displaytext h1{
+    font-family: 'Manrope', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 180%;
+    margin-left: 2%;
+}
+
+.displaytext h2{
+    font-family: 'Manrope', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 120%;
+    margin-left: 2%;
+}
+
+.displaytext p{
+    font-family: 'Manrope', sans-serif;
+    font-size: 120%;
+    margin-top: 5%;
+    text-align: justify;
+    color: white;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.picture-container{
+   text-align: center;
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+   /* background-color: rebeccapurple; */
+}
+
+.picture{
+    cursor: pointer;
+    width: 40%;
+    margin-left: 7%;
+    /* background-color: red; */
+    transition: transform .2s;
+}
+
+.picture:hover {
+    transform: scale(1.25);
+}
+
+.picture img{
+    width: 100%;
+    height: auto;
+    box-shadow: 5px 5px 8px rgba(24, 24, 24, 0.548);
+}
+
+.blackscreen{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgb(36, 36, 36);
+    opacity: 0;
+    z-index: 8;
+    pointer-events: none;
+    transition: opacity 0.5s;
+}
+
+.sticky{
+    top: 0%;
+    position: fixed;
+    width: 100%;
+    margin-top: 0px;
+}
+
+nav{
+    margin-top: -20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10%;
+    background-color: rgb(39, 39, 39);
+    font-family: 'Manrope', sans-serif;
+    transition: opacity 0.3s;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a{
+    color: rgb(214, 214, 214);
+    font-size: 120%;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+.burger{
+    position: absolute;
+    margin-left: 2%;
+    margin-top: 2%;
+    left: 0px;
+    top: 0px;
+    z-index: 9;
+}
+
+.burger div{
+    width: 27px;
+    height: 4px;
+    background-color: rgb(255, 255, 255);;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.banner{
+    background-repeat: no-repeat;
+    background-size: auto 30%;
+    width: 100%;
+    height: 20%;
+    background-attachment: fixed;
+    z-index: 0;
+    background-image: url(Faceless\ \(4\).png);
+    background-position: 50% -7%; 
+    background-color: rgba(29, 29, 29, 0.616); 
+    background-blend-mode: darken;
+}
+
+.head-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    left: 0px;
+    right: 0px;
+    position: absolute;
+    top: 8%;
+    white-space: nowrap;
+}
+
+.head h1{
+    font-size: 185%;
+    font-family: 'Manrope', sans-serif;
+    position: relative;
+    color: rgb(255, 255, 255);
+    z-index: 5;
+}
+
+.head h3{
+    font-family: 'Manrope', sans-serif;
+    position: relative;
+    margin-top: 5px;
+    color: rgb(51, 51, 51);
+    font-size: 65%;
+}
+
+/* iPad */
+@media only screen and (min-width: 768px)
+{
+    :root{
+        --lineoffsetx: -11px;
+        --lineoffsety: -15px;
+    }
+
+    .nav-links a{
+        font-size: 250%;
+        letter-spacing: 3px;
+    }
+    
+    .banner{
+        height: 23%;
+        background-position: 50% -5%;
+    }
+
+    .head h1{
+        font-size: 280%;
+    }
+
+    .head h3{
+        font-size: 130%;
+    }
+
+    .burger{
+        margin-left: 4%;
+        margin-top: 4%;
+    }
+    
+    .burger div{
+        width: 40px;
+        height: 6px;
+        margin: 7px;
+    }
+    
+    .displaytext a button{
+        margin-top: 2%;
+        margin-right: 2%;
+        width: 27%;
+        height: 12%;
+        border: 4px solid white;
+        font-size: 200%;
+    }
+    
+    .displaytext h1{
+        font-size: 350%;
+        margin-left: 3%;
+    }
+    
+    .displaytext h2{
+        font-size: 230%;
+        margin-left: 3%;
+    }
+    
+    .displaytext p{
+        font-size: 200%;
+        margin-top: 5%;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+}
+
+/*iPad Pro*/
+@media only screen and (min-width: 1024px)
+{
+    
+    .head h1{
+        font-size: 300%;
+    }
+    .head h3{
+        font-size: 150%;
+    }
+
+    nav{
+        margin-top: -20px;
+        height: 8%;
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.8);
+    }
+    .nav-links a{
+        font-size: 180%;
+    }
+    .nav-links{
+        width: 90%;
+    }
+    .displaytext p{
+        font-size: 250%;
+    }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1120px)
+{
+    .head h1{
+        margin-top: 8%;
+        font-size: 370%;
+    }
+
+    .head h3{
+        font-size: 170%;
+    }
+
+    .picture-container{
+        margin-top: 5%;
+    }
+    
+    .picture{
+        width: 30%;
+        margin-left: 13%;
+    }
+
+    .banner{
+        height: 60%;
+        background-size: auto 110%;
+        background-position: 50% 210%;
+    }
+    
+    .specialty{
+        height: 80%;
+        background-size: 130% auto;
+    }
+
+    nav{
+        height: 15%;
+        z-index: 2;
+    }
+
+    .introduction{
+        height: 90%;
+    }
+    .introduction img{
+        margin-left: 10%;
+    }
+    .introductiontextbox h1{
+        margin-left: 20px;
+        font-size: 280%;
+    }
+    .introductiontextbox h3{
+        padding-top: 70px;
+        font-size: 150%;
+        margin-left: 20px;
+        margin-right: 40px;
+    }
+
+    .mediaicon img{
+        width: 75%;
+    }
+
+    .display-container{
+        top: 5%;
+        margin-left: 5%;
+        width: 90%;
+        height: 90%;
+        background-color: white;
+        
+    }
+
+    .display-container img{
+        margin-left: 7%;
+        margin-top: 2%;
+        float: left;
+        width: auto;
+        height: 90%;
+    }
+
+    .displaytext{
+        box-shadow: -10px 0px 15px rgba(0, 0, 0, 0.548); 
+        float: right;
+        margin-right: 0%;
+        width: 35%;
+        margin-top: 0%;
+        height: 100%;
+        position: relative;
+    }
+    
+    .cross{
+        float: left;
+        width: 3%;
+    }
+
+    .cross img{
+        width: 100%;
+        height: auto;
+    }
+    
+    .displaytext a button{
+        margin-top: 4%;
+        margin-right: 3%;
+        width: 23%;
+        height: 7%;
+        border: 2px solid white;
+        font-size: 120%;
+    }
+
+    .displaytext p{
+        font-size: 170%;
+        margin-top: 5%;
+        text-align: justify;
+        color: white;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+        
+}
+
+@media only screen and (max-width: 768px)
+{
+    .burger{
+        display: block; 
+    }
+    .nav-links{
+        flex-direction: column;
+        z-index: 10;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        height: 100%;
+        background-color: rgb(39, 39, 39);
+        display: flex;
+        align-items: center;
+        transform: translateX(110%);
+        transition: transform 0.5s ease-in;
+        box-shadow: -4px 0px 8px rgba(0, 0, 0, 0.8);
+    }
+
+    nav{
+        background-color: white;
+        height: 5%;
+    }
+
+    .nav-links li{
+        opacity: 0;
+    }
+}
+
+@media only screen and (min-width: 1000px)
+{
+    .burger{
+        display: none; 
+    } 
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+.displayin{
+    transform: translateY(0%);
+    opacity: 1;
+    pointer-events: all;
+}
+
+@keyframes navLinkFade{
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes navLinkFadeOut{
+    from {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    to{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+}
+
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(var(--lineoffsetx), var(--lineoffsety));
+}

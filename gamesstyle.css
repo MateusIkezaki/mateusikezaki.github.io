@@ -1,0 +1,388 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body, html{
+    height: 100%;
+    width: 100%;
+}
+
+:root{
+    --lineoffsetx: -6px;
+    --lineoffsety: -8px; 
+}
+
+.video{
+    width: 100%;
+    height: 30%;
+    /* background-color: red; */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    position: relative;
+}
+
+.video video{
+    position: absolute;
+    width: 100%;
+    pointer-events: none;
+    opacity: .4;
+}
+
+.videotext{
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.videotext h1{
+    font-family: 'Manrope', sans-serif;
+    color: rgb(235, 235, 235);
+}
+
+.videotext h3{
+    font-family: 'Manrope', sans-serif;
+    color: rgb(235, 235, 235);
+    font-size: 90%;
+}
+
+.buttoncontainer{
+    text-align: center;
+}
+
+.buttoncontainer a button{
+    color: rgb(235, 235, 235);
+    background-color: rgba(0, 0, 0, 0);
+    font-family: 'Manrope', sans-serif;
+    margin-top: 3%;
+    margin-right: 2%;
+    height: 20%;
+    border: 1px solid rgb(235, 235, 235);
+    font-weight: bold;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    cursor: pointer;
+}
+
+.blackscreen{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    opacity: 0;
+    z-index: 8;
+    pointer-events: none;
+    transition: opacity 0.5s;
+}
+
+.sticky{
+    top: 0%;
+    position: fixed;
+    width: 100%;
+    margin-top: 0px;
+}
+
+nav{
+    margin-top: -20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10%;
+    background-color: rgb(39, 39, 39);
+    font-family: 'Manrope', sans-serif;
+    transition: opacity 0.3s;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a{
+    color: rgb(214, 214, 214);
+    font-size: 120%;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+.burger{
+    position: absolute;
+    margin-left: 2%;
+    margin-top: 2%;
+    left: 0px;
+    top: 0px;
+    z-index: 9;
+}
+
+.burger div{
+    width: 27px;
+    height: 4px;
+    background-color: rgb(255, 255, 255);;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.banner{
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 100%;
+    height: 20%;
+    background-attachment: fixed;
+    z-index: 0;
+    background-image: url(./GamesMedia/Banner.png);
+    background-position: 50% -7%; 
+    background-color: rgba(29, 29, 29, 0.616); 
+    background-blend-mode: darken;
+}
+
+.head-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    left: 0px;
+    right: 0px;
+    position: absolute;
+    top: 8%;
+    white-space: nowrap;
+}
+
+.head h1{
+    font-size: 185%;
+    font-family: 'Manrope', sans-serif;
+    position: relative;
+    color: rgb(255, 255, 255);
+    z-index: 5;
+}
+
+.head h3{
+    font-family: 'Manrope', sans-serif;
+    position: relative;
+    margin-top: 5px;
+    color: rgb(51, 51, 51);
+    font-size: 65%;
+}
+
+/* iPad */
+@media only screen and (min-width: 768px)
+{
+    :root{
+        --lineoffsetx: -11px;
+        --lineoffsety: -15px;
+    }
+
+    .nav-links a{
+        font-size: 250%;
+        letter-spacing: 3px;
+    }
+    
+    .banner{
+        height: 23%;
+        background-position: 50% -5%;
+    }
+
+    .head h1{
+        font-size: 280%;
+    }
+
+    .head h3{
+        font-size: 130%;
+    }
+
+    .burger{
+        margin-left: 4%;
+        margin-top: 4%;
+    }
+    
+    .burger div{
+        width: 40px;
+        height: 6px;
+        margin: 7px;
+    }
+
+    .video{
+        height: 40%;
+    }
+
+    .videotext h1{
+        font-size: 420%;
+    }
+    
+    .videotext h3{
+        font-size: 160%;
+    }
+
+    .buttoncontainer a button{
+        margin-top: 3%;
+        margin-right: 2%;
+        width: 17%;
+        height: 50px;
+        border: 2px solid rgb(235, 235, 235);
+        font-size: 130%;
+    }
+    
+    
+}
+
+/*iPad Pro*/
+@media only screen and (min-width: 1024px)
+{
+    
+    .head h1{
+        font-size: 300%;
+    }
+    .head h3{
+        font-size: 150%;
+    }
+
+    nav{
+        margin-top: -20px;
+        height: 8%;
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.8);
+    }
+    .nav-links a{
+        font-size: 180%;
+    }
+    .nav-links{
+        width: 90%;
+    }
+    
+    .videotext h3{
+        font-size: 210%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .buttoncontainer a button{
+        margin-top: 3%;
+        margin-right: 2%;
+        width: 17%;
+        height: 70px;
+        border: 2px solid rgb(235, 235, 235);
+        font-size: 170%;
+    }
+
+    .space{
+        height: 50px;
+    }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1120px)
+{
+    .head h1{
+        margin-top: 8%;
+        font-size: 370%;
+    }
+
+    .head h3{
+        font-size: 170%;
+    }
+
+    .banner{
+        height: 60%;
+        background-size: 100% auto;
+        background-position: 50% 50%;
+    }
+    
+    .specialty{
+        height: 80%;
+        background-size: 130% auto;
+    }
+
+    nav{
+        height: 15%;
+        z-index: 2;
+    }
+
+    .video{
+        height: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 768px)
+{
+    .burger{
+        display: block; 
+    }
+    .nav-links{
+        flex-direction: column;
+        z-index: 10;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        height: 100%;
+        background-color: rgb(39, 39, 39);
+        display: flex;
+        align-items: center;
+        transform: translateX(110%);
+        transition: transform 0.5s ease-in;
+        box-shadow: -4px 0px 8px rgba(0, 0, 0, 0.8);
+    }
+
+    nav{
+        background-color: white;
+        height: 5%;
+    }
+
+    .nav-links li{
+        opacity: 0;
+    }
+}
+
+@media only screen and (min-width: 1000px)
+{
+    .burger{
+        display: none; 
+    } 
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes navLinkFadeOut{
+    from {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    to{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+}
+
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(var(--lineoffsetx), var(--lineoffsety));
+}
