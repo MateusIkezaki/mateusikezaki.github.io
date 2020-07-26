@@ -6,7 +6,7 @@ const display = document.querySelector('.display-container')
 var currentsource;
 
 var currentitem = 0;
-const backgrounds = ["'Unity.png'", "'Faceless (4).png'", "'CasaNobre.png'"]
+const backgrounds = ["'Unity.png'", "'Faceless (4).png'", "'Casa Nobre Home Page.png'"]
 const titles = ["Unity Engine", "Pixel Art/Animation", "Web Development"]
 const subtitles = [
     "Game development on Unity is what I do best. I've been using it since 2017 and have published many projects in my itch.io page, which you can find in the 'Projects' page",
