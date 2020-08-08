@@ -227,7 +227,7 @@ nav{
     .buttoncontainer a button{
         margin-top: 3%;
         margin-right: 2%;
-        width: 17%;
+        width: 140px;
         height: 50px;
         border: 2px solid rgb(235, 235, 235);
         font-size: 130%;
@@ -268,7 +268,7 @@ nav{
     .buttoncontainer a button{
         margin-top: 3%;
         margin-right: 2%;
-        width: 17%;
+        width: 180px;
         height: 70px;
         border: 2px solid rgb(235, 235, 235);
         font-size: 170%;
