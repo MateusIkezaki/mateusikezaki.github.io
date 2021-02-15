@@ -33,6 +33,14 @@ body, html{
     opacity: .4;
 }
 
+.video img{
+    position: absolute;
+    width: 100%;
+    pointer-events: none;
+    opacity: .4;
+}
+
+
 .videotext{
     text-align: center;
     position: relative;
