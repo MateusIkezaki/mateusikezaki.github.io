@@ -40,7 +40,11 @@ const descriptions = [
     "After I finished drawing Nathan Drake I decided to celebrate the release of The Last of Us Part 2 by drawing Joel Miller, probably my favourite character in the entire franchise. The game caused some controversy to say the least, but I honestly enjoyed it a lot, even with the questionable pacing and plot choices. I used this drawing to explore alternative tools(such as the gradient for the lamp effect and motion blur for the dots representing moths) and brushes(I used a more scattered brush for the blood on Joel's shirt).",
     "I was super late to the party when I first watched this movie 4 years after its release. I absolutely loved it nonetheless and even made me appreciate my dreams more. The artstyle and animation are one of the most gorgeous I've ever seen, in fact they were one of the reasons why I started drawing more on Photoshop. I tried exploring more cloth behavior in this one, that's why you can see the little wrinkles on Mitsuha's shirt. I also played around with shadows to see what I could come up with. If you compare this drawing to the other ones I made in this style you will probably notice how the shadows on the other two are a lot more linear.",
     "I was practicing portraits when I drew this one. Since I was extremely excited for Attack on Titan's final season, I decided to draw Reiner Braun for practice, especially because the armored titan is my favorite titan. I remember extremely happy with this one. This drawing was a huge motivation for me to keep illustrating.",
-    "This is the very first promotional poster I made for my biggest project to date: Phantom Tower. I started practicing digital illustration so I could promote my own games without having to hire a freelancer. This was a particularly exciting project. As I was wrapping this poster up, I realized how close I was from publishing a 2 year long project. The art style based on the illustrations a friend made for the game's cutscenes."
+    "This is the very first promotional poster I made for my biggest project to date: Phantom Tower. I started practicing digital illustration so I could promote my own games without having to hire a freelancer. This was a particularly exciting project. As I was wrapping this poster up, I realized how close I was from publishing a 2 year long project. The art style based on the illustrations a friend made for the game's cutscenes.",
+    "I drew this for a school project about building landscapes. I wanted to practice perspective for a while so this was the perfect opportunity. I basically recreated a photograph I took at the Design Society art center in Shenzhen. There was this strange statue staring at a pyramid across a glass panel. The lonely composition inspired me to rethink the scenario and add a completely new context, which is what I did in this illustration.",
+    "During the production of Phantom Tower I realized that I seriously needed to improve my animation skills. I lacked the understanding of basic concepts so I took some time during art class to study animation concepts and techniques. I was extremely proud of this animation. It feels smooth and it flows well, unlike my previous idling animations, which were stiff and choppy. I played around with drag to give weight to the character's movement and that technique alone improved the quality of this animation a lot.",
+    "This was probably the hardest animation I made for this character. The fork spin was particularly difficult to figure out, but I managed to convey that movement successfully by changing the fork's shape in two frames, thus creating the illusion of rotation. I had a lot of fun making this one. I got to practice techniques such as smearing and distortion to express movement.",
+    "I had a blast making this running cycle too. I had never properly analyzed a run cycle and it's incredible how there's a specific pattern that can be followed for every running animation. Understanding this pattern was key to making this animation and it's a knowledge I consider to be one of the most important I've acquired during this project."
 ]
 
 var header = document.getElementById("header")
@@ -64,7 +68,7 @@ const Subtract = () => {
 }
 
 const Transition = () => {
-    specialty.style.backgroundImage = "url('Black.png')";
+    specialty.style.opacity = "0";
     window.setTimeout('Change_Specialty()', 1000);
 } 
 
@@ -74,7 +78,7 @@ const Change_Specialty = () => {
     specialty.querySelector('h1').textContent = titles[currentitem];
     specialty.querySelector('h4').textContent = subtitles[currentitem];
     specialty.style.backgroundImage = `url(${backgrounds[currentitem]})`;
-
+    specialty.style.opacity = 1;
 }
 
 const DetectPagePos = () => {
@@ -87,8 +91,8 @@ const HideNav = () =>{
     if(window.innerWidth < 1024) return
     window.addEventListener("scroll", () => {
         const currentscroll = window.pageYOffset
-        if(currentscroll < lastscroll || currentscroll <= sticky) header.style.opacity = 1;
-        else header.style.opacity = 0
+        if(currentscroll < lastscroll || currentscroll <= sticky) header.style.top = '0%';
+        else header.style.top = '-50%'
 
         lastscroll = currentscroll
     })

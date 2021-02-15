@@ -39,7 +39,7 @@ nav{
     height: 10%;
     background-color: rgb(39, 39, 39);
     font-family: 'Manrope', sans-serif;
-    transition: opacity 0.3s;
+    transition: top 0.3s;
 }
 
 .nav-links{
