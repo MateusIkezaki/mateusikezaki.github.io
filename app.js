@@ -44,7 +44,9 @@ const descriptions = [
     "I drew this for a school project about building landscapes. I wanted to practice perspective for a while so this was the perfect opportunity. I basically recreated a photograph I took at the Design Society art center in Shenzhen. There was this strange statue staring at a pyramid across a glass panel. The lonely composition inspired me to rethink the scenario and add a completely new context, which is what I did in this illustration.",
     "During the production of Phantom Tower I realized that I seriously needed to improve my animation skills. I lacked the understanding of basic concepts so I took some time during art class to study animation concepts and techniques. I was extremely proud of this animation. It feels smooth and it flows well, unlike my previous idling animations, which were stiff and choppy. I played around with drag to give weight to the character's movement and that technique alone improved the quality of this animation a lot.",
     "This was probably the hardest animation I made for this character. The fork spin was particularly difficult to figure out, but I managed to convey that movement successfully by changing the fork's shape in two frames, thus creating the illusion of rotation. I had a lot of fun making this one. I got to practice techniques such as smearing and distortion to express movement.",
-    "I had a blast making this running cycle too. I had never properly analyzed a run cycle and it's incredible how there's a specific pattern that can be followed for every running animation. Understanding this pattern was key to making this animation and it's a knowledge I consider to be one of the most important I've acquired during this project."
+    "I had a blast making this running cycle too. I had never properly analyzed a run cycle and it's incredible how there's a specific pattern that can be followed for every running animation. Understanding this pattern was key to making this animation and it's a knowledge I consider to be one of the most important I've acquired during this project.",
+    "",
+    ""
 ]
 
 var header = document.getElementById("header")
