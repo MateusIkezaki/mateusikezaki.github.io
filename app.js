@@ -135,7 +135,30 @@ const HideDisplay = () => {
 const Display = (source, title, sub, desc) => {
     document.querySelector('.blackscreen').style.opacity = .7
     display.classList.toggle('displayin')
+
+    const imageDisplay = document.getElementById('displaysource')
+    const bound = document.getElementById('img-bound');
+
     document.getElementById('displaysource').src = source
+    if (imageDisplay.naturalHeight > imageDisplay.naturalWidth) {
+        
+        imageDisplay.style.width = "auto"
+        imageDisplay.style.height = "100%"
+        if (imageDisplay.width > bound.clientWidth) {
+            let newHeight = bound.clientWidth / imageDisplay.width;
+            newHeight *= 100;
+            imageDisplay.style.height = `${newHeight}%`
+        }
+    } else {
+        imageDisplay.style.width = "100%"
+        imageDisplay.style.height = "auto"
+        if (imageDisplay.height > bound.clientHeight) {
+            let newWidth = bound.clientHeight / imageDisplay.height;
+            newWidth *= 100;
+            imageDisplay.style.width = `${newWidth}%`
+        }
+    }
+
     document.getElementById('title').textContent = title
     document.getElementById('sub').textContent = sub
     document.getElementById('desc').textContent = desc
