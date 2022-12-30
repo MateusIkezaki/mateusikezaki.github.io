@@ -7,11 +7,11 @@ var currentsource;
 
 var currentitem = 0;
 const backgrounds = ["'Unity.png'", "'Faceless (4).png'", "'Casa Nobre Home Page.png'"]
-const titles = ["Unity Engine", "Pixel Art/Animation", "Web Development"]
+const titles = ["Unity Engine", "Digital Art/Animation", "Web Development"]
 const subtitles = [
-    "Game development on Unity is what I do best. I've been using it since 2017 and have published many projects in my itch.io page, which you can find in the 'Projects' page",
-    "I always make my own animations and sprites for my games. I use piskel to create my sprite sheets. You can find some of my work in the Gallery.",
-    "I began developing websites back in 2018. My specialty is front end in HTML, CSS and Javascript. With that said, I do know basic database management with NeDB and Node.js."
+    "Game Development on Unity is what I do best. I've been using it since 2017 and have published over 10 projects in my itch.io page, which you can find in the 'Games' page",
+    "Digital illustration is my therapy. I always make my own animations and sprites for my games. You can my work under Gallery.",
+    "I began developing websites back in 2018. Over the years I have developed several web applications with HTML, CSS, Node.js, and Javascript for fun and for businesses as well. Check them out under 'Websites'!"
 ]
 
 const descriptions = [
