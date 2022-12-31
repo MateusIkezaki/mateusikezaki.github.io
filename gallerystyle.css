@@ -41,7 +41,7 @@ body, html{
     pointer-events: none;
     transform: translateY(15%);
     transition: all 0.3s ease-in;
-
+    background-color: rgb(255, 255, 255);
 }
 
 .display-img-bound{
@@ -403,7 +403,7 @@ nav{
         margin-left: 5%;
         width: 90%;
         height: 90%;
-        background-color: rgb(255, 255, 255);
+        
     }
 
     .display-container img{
